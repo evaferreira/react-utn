@@ -1,12 +1,16 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
+import Title from './components/Title';
+import Mascota from './components/Mascota';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
+      <Title />
+      <Mascota />
       <header className="App-header">
         <img src="images/gatito.jpg" alt="Gatito" />
-        <img src={logo} className="App-logo" alt="logo" />
+        {/* <img src={logo} className="App-logo" alt="logo" /> */}
         <p>
           Edit!!! <code>src/App.js</code> and save to reload.
         </p>
