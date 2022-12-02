@@ -1,12 +1,14 @@
 // import logo from './logo.svg';
 import Title from './components/Title';
 import Mascota from './components/Mascota';
+import Card from './components/Card';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <Title />
+      <Card />
       <Mascota />
       <header className="App-header">
         <img src="images/gatito.jpg" alt="Gatito" />
