@@ -5,9 +5,26 @@ import Card from './components/Card';
 import './App.css';
 
 function App() {
+  const numeros = [45, 78, 12, 787, 341];
+
   return (
     <div className="App">
-      <Title />
+      {/* {numeros.map(numero => {
+        sumarle un 10%
+        total = numero * 1.1
+        return (
+          <p>El número es: {total}</p>
+        );
+      })}
+        El .map requiere un return, puedo usar () para que esté implícito
+      */}
+
+      {numeros.map(numero => (
+        <p>El número es: {numero}</p>
+      ))}
+
+      {/* Llamamos al componente y le enviamos el parámetro */}
+      <Title titulo={'Hola, cómo va'} />
       <Card />
       <Mascota />
       <header className="App-header">
