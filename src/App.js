@@ -1,30 +1,23 @@
 // import logo from './logo.svg';
-import Title from './components/Title';
+import { Routes, Route} from "react-router-dom";
 import Mascota from './components/Mascota';
-import Card from './components/Card';
+import Home from './pages/Home';
+import Layout from './pages/Layout';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <Title />
-      <Card />
-      <Mascota />
-      <header className="App-header">
-        <img src="images/gatito.jpg" alt="Gatito" />
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
-        <p>
-          Edit!!! <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="mascota" element={<Mascota />} />
+
+          {/* 404
+          <Route path="*" element={<NoMatch />} />
+           */}
+        </Route>
+      </Routes>
     </div>
   );
 }
