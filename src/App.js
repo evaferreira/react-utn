@@ -5,10 +5,15 @@ import Card from './components/Card';
 import './App.css';
 
 function App() {
+  const numeros = [43, 56,234,23,657];
+
   return (
     <div className="App">
-      <Title />
+      <Title title={'holi'} />
       <Card />
+      {numeros.map(numero => (
+        <h3>Es: {numero}</h3>
+      ))}
       <Mascota />
       <header className="App-header">
         <img src="images/gatito.jpg" alt="Gatito" />
