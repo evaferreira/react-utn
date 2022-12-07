@@ -1,9 +1,12 @@
 import './App.css';
+import CardWrapper from './components/CardWrapper';
 
 function App() {
   return (
     <div className="App">
-      Hola mundo
+      <CardWrapper
+        titulo={'Ofertas'}
+      />
     </div>
   );
 }
